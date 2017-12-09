@@ -1,0 +1,25 @@
+<view class="weui-search-bar">  
+    <view class="weui-search-bar__form">  
+        <view class="weui-search-bar__box">  
+            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>  
+            <input type="text" class="weui-search-bar__input" placeholder="请输入片名主演或导演" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="bindKeyInput"/>  
+            <view class="weui-icon-clear"  bindtap="clearInput">  
+                <icon type="clear" size="14"></icon>  
+            </view>  
+        </view>  
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">  
+            <icon class="weui-icon-search" type="search" size="14"></icon>  
+            <view class="weui-search-bar__text" bindtap="">搜索</view>  
+        </label>  
+    </view>  
+    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="addItem">搜索</view>  
+</view>  
+<view>  
+    <view  class="search-log" wx:for="{{searchs}}">  
+        <text style="font-size:14px;font-family:microsoft yahei">{{item.text}}</text>
+        <icon type="clear"  class="inline" bindtap="deleteItem" data-key="{{item.key}}" size="14"></icon>
+    </view>  
+
+    <!-- <view class="clear-search-log" bindtap="deleteitem">清除搜索记录</view>   -->
+    
+</view> 

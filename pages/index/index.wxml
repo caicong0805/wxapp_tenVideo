@@ -1,0 +1,129 @@
+<view>
+    <image src="../../images/logo.png" mode="widthFix" class="logo"></image>
+   <icon type="search" color="white" size="24" class="icon" bindtap="search"></icon>
+</view>
+<image class="top-image" src="{{bannerList[activeBannerIndex].url}}" mode="widthFix"></image>
+<view class="container">
+  <swiper class="slider" bindchange="bindChange">
+    <swiper-item id="green">
+      <view class="scroll-view-item">
+          <text class="title">胡歌 ></text>
+          <view class="content">
+              <view class="list">
+                 <view class="detail">
+                    <image src="../../images/hu_1.png" mode="widthFix"></image>
+                    <view class="font-area">
+                        <text class="bold">怪咖啪啪啪</text>
+                        <text>劲爆，胡歌女友竟...</text>
+                    </view>
+                 </view>
+                 <view class="detail">
+                    <image src="../../images/hu_2.png" mode="widthFix"></image>
+                    <view class="font-area">
+                        <text class="bold">鲁豫有约</text>
+                        <text>胡歌·破茧十年</text>
+                    </view>
+                 </view>
+              </view>
+              <view class="space-50"></view>
+              <view class="list">
+                 <view class="detail">
+                    <image src="../../images/hu_3.png" mode="widthFix"></image>
+                    <view class="font-area">
+                        <text class="bold">可凡倾听</text>
+                        <text>胡歌回忆车祸悲惨经历...</text>
+                    </view>
+                 </view>
+                 <view class="detail">
+                    <image src="../../images/hu_4.png" mode="widthFix"></image>
+                    <view class="font-area">
+                        <text class="bold">非常静距离</text>
+                        <text>出道十年从花美男蜕变...</text>
+                    </view>
+                 </view>
+              </view>
+          </view>
+      </view>
+    </swiper-item>
+    <swiper-item id="yellow">
+      <view class="scroll-view-item">
+          <text class="title">黄晓明 ></text>
+          <view class="content">
+              <view class="list">
+                 <view class="detail">
+                    <image src="../../images/huang_1.jpg" mode="widthFix"></image>
+                    <view class="font-area">
+                        <text class="bold">锦绣缘华丽冒险</text>
+                        <text>陈乔恩变身全能女友</text>
+                    </view>
+                 </view>
+                 <view class="detail">
+                    <image src="../../images/huang_2.png" mode="widthFix"></image>
+                    <view class="font-area">
+                        <text class="bold">龙票</text>
+                        <text>小明传龙票精神</text>
+                    </view>
+                 </view>
+              </view>
+              <view class="space-50"></view>
+              <view class="list">
+                 <view class="detail">
+                    <image src="../../images/huang_3.png" mode="widthFix"></image>
+                    <view class="font-area">
+                        <text class="bold">风流少年唐伯虎</text>
+                        <text>黄晓明演绎呆萌才子...</text>
+                    </view>
+                 </view>
+                 <view class="detail">
+                    <image src="../../images/huang_4.png" mode="widthFix"></image>
+                    <view class="font-area">
+                        <text class="bold">大汉天子</text>
+                        <text>黄晓明的青葱岁月</text>
+                    </view>
+                 </view>
+              </view>
+          </view>
+      </view>
+    </swiper-item>
+    <swiper-item id="blue">
+      <view class="scroll-view-item">
+          <text class="title">赵丽颖 ></text>
+          <view class="content">
+              <view class="list">
+                 <view class="detail">
+                    <image src="../../images/zhao_1.jpg" mode="widthFix"></image>
+                    <view class="font-area">
+                        <text class="bold">胭脂</text>
+                        <text>赵丽颖变身民国美女...</text>
+                    </view>
+                 </view>
+                 <view class="detail">
+                    <image src="../../images/zhao_2.png" mode="widthFix"></image>
+                    <view class="font-area">
+                        <text class="bold">吉祥天宝</text>
+                        <text>小骨赵丽颖追爱金...</text>
+                    </view>
+                 </view>
+              </view>
+              <view class="space-50"></view>
+              <view class="list">
+                 <view class="detail">
+                    <image src="../../images/zhao_3.png" mode="widthFix"></image>
+                    <view class="font-area">
+                        <text class="bold">花千骨[DVD版]</text>
+                        <text>霍建华赵丽颖师徒乱...</text>
+                    </view>
+                 </view>
+                 <view class="detail">
+                    <image src="../../images/zhao_4.png" mode="widthFix"></image>
+                    <view class="font-area">
+                        <text class="bold">怪咖啪啪啪</text>
+                        <text>艺人签霸王条款...</text>
+                    </view>
+                 </view>
+              </view>
+          </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

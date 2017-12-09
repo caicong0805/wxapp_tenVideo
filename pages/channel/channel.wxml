@@ -1,0 +1,51 @@
+
+        <view class="weui-tab">
+                <view class="swiper-tab">
+                    <view class="swiper-tab-item {{activeIndex==0?'active':''}}" bindtap="changeTab" data-index="0">电视剧</view>
+                    <view class="swiper-tab-item {{activeIndex==1?'active':''}}" bindtap="changeTab" data-index="1">综艺</view>
+                    <view class="swiper-tab-item {{activeIndex==2?'active':''}}" bindtap="changeTab" data-index="2">电影</view>
+                    <view class="swiper-tab-item {{activeIndex==3?'active':''}}" bindtap="changeTab" data-index="3">动漫</view>
+                    <icon type="search" size="26" color="#808080" class="swiper-tab-item" bindtap="search"></icon>
+                </view>
+          
+                <swiper current='{{activeIndex}}' bindchange="swiperTab">
+                    <swiper-item>
+                        <view class="swiper-item weui-tab__content" wx:for="{{wangzhe}}">
+                            <view class="contain">
+                                <view class="list-title">{{item.label}} ></view>
+                                <view class="detail" wx:for="{{item.video}}">
+                                    <image src="{{item.videoImage}}" mode="widthFix" class="wz"></image>
+                                    <view class="list-font"><text>{{item.title}}</text></view>
+                                </view>
+                            </view>
+                        </view>
+                    </swiper-item>
+                    <swiper-item>
+                        <view class="swiper-item weui-tab__content" wx:for="{{kuaikan}}">
+                                <view class="contain">
+                                        <view class="img">
+                                            <image src="{{item.videoImage}}" mode="widthFix" class="picture"></image>
+                                            <text class="top">{{item.title}}</text>
+                                        </view>
+                                        
+                                    </view>
+                        </view>
+                    </swiper-item>
+                    <swiper-item>
+                        <view class="swiper-item weui-tab__content" wx:for="{{shenjianji}}">
+                            <view class="contain">
+                                    <view class="img">
+                                        <image src="{{item.videoImage}}" mode="widthFix" class="picture"></image>
+                                        <text class="top">{{item.title}}</text>
+                                    </view>
+                                </view>
+                    </view>
+                    </swiper-item>
+                    <swiper-item>
+                          <view class="swiper-item weui-tab__content">
+                            
+                            </view>
+                      </swiper-item>
+                </swiper>
+            </view>
+          

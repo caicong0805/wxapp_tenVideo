@@ -1,0 +1,23 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+    <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+         <block wx:else>
+        <view><image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image></view>
+        <view><text class="userinfo-nickname">{{userInfo.nickName}}</text></view>
+        </block>
+    </view>
+    <view class="vip">
+        <image src="../../images/start.png" mode="widthFix"></image>
+        <text class="h2">开通VIP会员</text>
+    </view>
+    <view class="history" bindtap="toplay">
+        <text>观看历史</text>
+    </view>
+    <view class="play-list">
+        <text>我的看单</text>
+    </view>
+    <view class="set">
+        <text>设置</text>
+    </view>
+</view>

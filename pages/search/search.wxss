@@ -1,0 +1,34 @@
+.weui-search-bar {  
+    position:relative;  
+    padding:6px 10px;  
+    display:-webkit-box;  
+    display:-webkit-flex;  
+    display:flex;  
+    box-sizing:border-box;  
+    background-color:#EFEFF4;  
+    border-top:0 solid #D7D6DC;  
+    border-bottom:0 solid #D7D6DC;  
+    border-radius:4px;  
+}  
+  
+.search-log{  
+    border:1px solid #eee !important;  
+    display:inline-block !important;  
+    margin-left:10px !important;  
+    margin-top:5px !important;  
+    border-radius:5px;  
+    padding-left:14px;  
+    padding-right:14px;  
+    box-sizing:border-box;  
+    text-align:center;  
+    text-decoration:none;  
+    line-height:1.666666;  
+}  
+  
+.clear-search-log{  
+    text-align: center;  
+} 
+.weui-search-bar__cancel-btn{
+    color: orange;
+    font-size: 14px;
+} 

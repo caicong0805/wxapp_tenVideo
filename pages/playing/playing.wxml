@@ -1,0 +1,4 @@
+<view class="play">
+    <video src="{{src}}"></video>
+</view>
+<text>2017年度献礼！用3分钟混剪告诉你这一年的感动和眼泪！</text>

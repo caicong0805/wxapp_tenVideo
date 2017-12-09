@@ -1,0 +1,98 @@
+/**index.wxss**/
+.top-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+
+}
+.icon {
+    position: absolute;
+    right: 45rpx;
+    top: 50rpx;
+    z-index: 6;
+}
+.logo {
+    position: absolute;
+    left: 55rpx;
+    top: 47rpx;
+    width: 239rpx;
+    height: 53rpx;
+    z-index: 8;
+}
+.container .slider {
+    height: 100%;
+    width: 100%;
+    padding-bottom: 0;
+    bottom: 50rpx;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(to top,rgba(205, 198, 197, 1) 80%, rgba(205, 198, 197, 0.7) 90%, rgba(205, 198, 197, 0.0) 100%);
+}
+.container .slider-content{
+    height: 100%;
+    width: 9999rpx;
+    display: table;
+    transform: translate3d(0rpx, 0 , 0);
+    left:0;
+}
+.container .scroll-view-item {
+    height: 100%;
+    width: calc(100% - 92rpx);
+    border-radius: 20rpx;
+    margin-left: 46rpx;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    background: #fff;
+}
+.container .title {
+    font-size: 34rpx;
+    font-weight: bold;
+    line-height: 190rpx;
+    display: inline-block;
+}
+.container .content {
+    width: 100%;
+    margin: 0 0rpx;
+}
+.container .content .list{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.container .content .list .detail {
+    flex:1;
+    margin:0 30rpx;
+}
+.container .content .list .detail image{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.container .content .list .detail .font-area {
+    padding: 10rpx 0;
+}
+.container .content .list .detail .font-area text{
+    font-size: 24rpx;
+    line-height: 34rpx;
+    display: flex;
+}
+.container .scroll-view-item.bc-green {
+    background: green;
+}
+.container .scroll-view-item.bc-red {
+    background: red;
+}
+.container .scroll-view-item.bc-yellow {
+    background: yellow;
+}
+.container .scroll-view-item.bc-blue {
+    background: blue;
+}
+.container .space-50 {
+        height: 50rpx;
+    width: 100%;
+}
