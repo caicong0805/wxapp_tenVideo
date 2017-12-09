@@ -37,9 +37,71 @@
 ***
 ### 项目展示：
 #### 1.首页的展示：
+![首页](https://github.com/caicong0805/wxapp_tenVideo/blob/master/images/%E9%A6%96%E9%A1%B5.gif?raw=true)
+
+*首页其实是比较好看的，美观大方，很可惜官方已经改版了*
+
+* 每一个swiper的背景和第一张图片是绑定的
+
+**index.wxml部分代码**
+
+      <image class="top-image" src="{{bannerList[activeBannerIndex].url}}" mode="widthFix"></image>
+
+**index.js部分代码**
+
+        bannerList  : [
+      {
+        url :　"../../images/hu_1.png"
+      },{
+        url :  "../../images/huang_1.jpg"
+      },{
+        url :  "../../images/zhao_1.jpg"
+      }
+      ],
+
+
 #### 2.短视频，频道界面的展示：
+![短视频](https://github.com/caicong0805/wxapp_tenVideo/blob/master/images/%E7%9F%AD%E8%A7%86%E9%A2%91.gif?raw=true)
+
+- 这里的数据是从easy-mock获得的
+- 这是我的[接口](https://www.easy-mock.com/mock/5a223177707056548f085eee/data/getTencentInfo),没有做很多，大家可以用来练练手，后续会增加的
+
+        <swiper-item>
+                    <view class="swiper-item weui-tab__content" wx:for="{{wangzhe}}">
+                        <view class="contain">
+                            <view class="list-title">{{item.label}} ></view>
+                            <view class="detail" wx:for="{{item.video}}">
+                                <image src="{{item.videoImage}}" mode="widthFix" class="wz"></image>
+                                <view class="list-font"><text>{{item.title}}</text></view>
+                            </view>
+                        </view>
+                    </view>
+        </swiper-item>
+        
+- 因为数据都是图片，所以为了还原真实性，我用伪元素做了个三角形播放图标
+
+        .picture ::before
+        {
+        position: absolute;
+        border:11px solid transparent;
+        border-left:17px solid #fff;
+        content: "";
+        top: 100px;
+        left: 180px;
+        }
+
+
 #### 3.播放界面的展示：
+![播放](https://github.com/caicong0805/wxapp_tenVideo/blob/master/images/%E6%92%AD%E6%94%BE.gif?raw=true)
+
+
+
+
 #### 4.搜索界面的展示：
+![搜索](https://github.com/caicong0805/wxapp_tenVideo/blob/master/images/%E6%90%9C%E7%B4%A2.gif?raw=true)
+
+
+
 ***
 ### 一点心得：
 
