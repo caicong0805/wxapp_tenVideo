@@ -3,21 +3,19 @@ Page({
   data:{  
     searchs:[],
     current:null,
-    //searchLogList:[],  存储搜索历史记录信息  
     hidden:true, // 加载提示框是否显示  
     scrollTop : 0, // 居顶部高度  
     inputShowed: false, // 搜索输入框是否显示  
     inputVal: "", // 搜索的内容  
-    //searchLogShowed: false 是否显示搜索历史记录  
+    histroyShowed:true //搜索记录
   },  
   bindKeyInput:function(e){
     this.data.current = e.detail.value;
   },
   showInput: function () {  
-    var that = this;  
-      that.setData({  
-          inputShowed: true,  
-          // searchLogShowed: true  
+      this.setData({  
+          inputShowed: true,
+          histroyShowed:false  
       });  
   },  
   addItem:function(){
@@ -33,11 +31,7 @@ Page({
     var key = e.target.dataset.key;
     this.ref.child(key).remove();
   },
-  //事件处理函数
-  // deleteItem:function(e){
-  //   var key = e.target.dataset.key;
-  //   this.ref.child(key).remove();
-  // },
+
   onLoad:function(options){  
     this.ref = app.getTodoRef();
     this.ref.on('child_added',function(snapshot,prkey){
@@ -66,17 +60,6 @@ Page({
           })
         }
     },this)
-    // 页面初始化 options为页面跳转所带来的参数  
-    // var that = this;  
-    // wx.getSystemInfo({  
-    //   success: function(res) {  
-    //     that.setData( {  
-    //       windowHeight: res.windowHeight,  
-    //       windowWidth: res.windowWidth  
-    //     })  
-    //   }  
-    // });  
-    // 如果缓存中有值，先从缓存中读取  
   },
   getUserInfo: function(e) {
     console.log(e)
@@ -93,75 +76,15 @@ Page({
     // 页面显示  
   },  
   
-  // 显示搜索输入框和搜索历史记录  
-
-  
-  // 显示搜索历史记录  
-  // searchLogShowed: function(){  
-  //   var that = this;  
-  //   if ("" != wx.getStorageSync('searchLog')) {  
-  //     that.setData({  
-  //         searchLogShowed: true,  
-  //         searchLogList : wx.getStorageSync('searchLog')  
-  //     });  
-  //   } else {  
-  //     that.setData({  
-  //         searchLogShowed: true  
-  //     });  
-  //   }  
-  // },  
-  
-  // 点击 搜索 按钮后 隐藏搜索记录，并加载数据  
-  // searchData: function () {  
-  //   var that = this;  
-  //   searchLogList:wx.getStorageSync('searchLog')
-
-    // 搜索后将搜索记录缓存到本地   
-  // },  
-  
   // 点击叉叉icon 清除输入内容，同时清空关键字，并加载数据  
   clearInput: function () {  
-    var that = this;  
-    that.data.current = null;
-    that.setData({  
+    this.data.current = null;
+    this.setData({  
         scrollTop : 0,  
         inputVal: ""  
     });
 
-  },  
-  
-  // 输入内容时 把当前内容赋值给 查询的关键字，并显示搜索记录  
-  // inputTyping: function (e) {  
-  //   var that = this;  
-  //     that.setData({  
-  //         inputVal: e.detail.value,  
-  //         // searchLogShowed: true  
-  //     });  
-  // },  
-  
-  // 通过搜索记录查询数据  
-  // searchDataByLog: function(e){  
-    // 从view中获取值，在view标签中定义data-name(name自定义，比如view中是data-log="123" ; 那么e.target.dataset.log=123)  
-  //   var that = this;  
-  //   that.setData({  
-  //       msgList : [],  
-  //       scrollTop : 0,  
-  //       searchLogShowed: false  
-  //   });  
-  // },  
-  // 清除搜索记录  
-  // clearSearchLog:function(){  
-  //   var that = this;  
-  //   that.setData({  
-  //     hidden:false  
-  //   });  
-  //   wx.removeStorageSync("searchLog");  
-  //   that.setData({  
-  //       scrollTop : 0,  
-  //       searchLogShowed: false,  
-  //       hidden:true  
-  //   });  
-  // },  
+  },   
   onHide:function(){  
     // 页面隐藏  
   },  

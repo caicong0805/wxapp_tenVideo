@@ -232,5 +232,4 @@
 最后送给大家demo里出现的《三分钟回顾2017》，谢谢支持！
 
 <iframe width=500 height=300 allowfullscreen src="http://gslb.miaopai.com/stream/PAEyMDoxMSB9hV6BVT1l5SHT-sMVVRVgHlL7bA__.mp4?mpflag=64&amp;vend=1&amp;os=3&amp;partner=1&amp;platform=2&amp;cookie_id=&amp;refer=miaopai&amp;scid=PAEyMDoxMSB9hV6BVT1l5SHT-sMVVRVgHlL7bA__"></iframe>
-***
 
