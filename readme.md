@@ -8,7 +8,7 @@
 - 微信开发者工具
 - [小程序开发文档](https://mp.weixin.qq.com/)
 - [iconfont矢量图标库](http://www.iconfont.cn/collections)：可以找到合适的tabBar图标
-- [eas-mock](https://www.easy-mock.com/)：提供虚拟数据接口
+- [easy-mock](https://www.easy-mock.com/)：提供虚拟数据接口
 - [wilddog](www.wilddog.com)：实现毫秒级的实时数据同步功能，无需自己构建后端服务器 
 ***
 
@@ -37,7 +37,7 @@
 ***
 ### 项目展示：
 #### 1.首页的展示：
-![首页](https://github.com/caicong0805/wxapp_tenVideo/blob/master/images/%E9%A6%96%E9%A1%B5.gif?raw=true)
+![首页](https://user-gold-cdn.xitu.io/2017/12/10/16040949cfe5e8ee?w=402&h=693&f=gif&s=953096)
 
 *首页其实是比较好看的，美观大方，很可惜官方已经改版了*
 
@@ -61,7 +61,7 @@
 
 
 #### 2.短视频，频道界面的展示：
-![短视频](https://github.com/caicong0805/wxapp_tenVideo/blob/master/images/%E7%9F%AD%E8%A7%86%E9%A2%91.gif?raw=true)
+![短视频](https://user-gold-cdn.xitu.io/2017/12/10/16040949d7a9e01c?w=402&h=693&f=gif&s=2067436)
 
 - 这里的数据是从easy-mock获得的
 - 这是我的[接口](https://www.easy-mock.com/mock/5a223177707056548f085eee/data/getTencentInfo),没有做很多，大家可以用来练练手，后续会增加的
@@ -92,16 +92,18 @@
 
 
 #### 3.播放界面的展示：
-![播放](https://github.com/caicong0805/wxapp_tenVideo/blob/master/images/%E6%92%AD%E6%94%BE.gif?raw=true)
+![播放](https://user-gold-cdn.xitu.io/2017/12/10/16040949e18a8001?w=402&h=693&f=gif&s=3326870)
 
 
 
 
 #### 4.搜索界面的展示：
-![搜索](https://github.com/caicong0805/wxapp_tenVideo/blob/master/images/%E6%90%9C%E7%B4%A2.gif?raw=true)
+![搜索](https://user-gold-cdn.xitu.io/2017/12/10/16040949cf733fc6?w=402&h=693&f=gif&s=745979)
 
 * 搜索界面引用了weui样式
 * @import "./weui.wxss";
+   
+
         <view class="weui-search-bar">  
             <view class="weui-search-bar__form">  
                 <view class="weui-search-bar__box">  
@@ -125,15 +127,16 @@
             </view>      
         </view> 
 * 隐藏了搜索记录和搜索框
-        data:{  
-            searchs:[],
-            current:null,
-            hidden:true, // 加载提示框是否显示  
-            scrollTop : 0, // 居顶部高度  
-            inputShowed: false, // 搜索输入框是否显示  
-            inputVal: "", // 搜索的内容  
-            histroyShowed:true //搜索记录
-          }
+
+            data:{  
+                searchs:[],
+                current:null,
+                hidden:true, // 加载提示框是否显示  
+                scrollTop : 0, // 居顶部高度  
+                inputShowed: false, // 搜索输入框是否显示  
+                inputVal: "", // 搜索的内容  
+                histroyShowed:true //搜索记录
+              }
 
 **关于wilddog**
 
@@ -142,8 +145,10 @@
 *这是他的[官方文档](https://docs.wilddog.com/overview/index.html?_ga=1.129586255.2113090780.1512732019)*
 
 * 首先要导入wilddog-weapp-all.js
+
         var wilddog = require('wilddog-weapp-all');
 * 引用创建的接口
+
         var config = {
               syncURL:'https://appid.wilddogio.com',
               authDomain:'appid.wilddog.com'
@@ -151,9 +156,12 @@
 *appid为你创建的应用id*
 
 * wilddog是以key-value的形式存储数据，创建引用会定位到根节点。若要定位到子节点，只需在url后追加路径即可:
-![wilddog]() 
+![wilddog](https://user-gold-cdn.xitu.io/2017/12/10/1604099a5d09d2e0?w=551&h=234&f=png&s=18257) 
 
 * 利用野狗的child()方法获取子节点，达到删除和增加的功能
+
+
+
         addItem:function(){
             if(this.data.current != null){
               // 将所有的后台业务交给app.js
@@ -200,7 +208,7 @@
 
 ***
 ### 一点心得：
-##### 1.遇到的问题：
+#### 1.遇到的问题：
 * 写完数据后发现才发现内容全都不见了：
 
     *小程序只支持http:// 服务请求*
@@ -224,14 +232,16 @@
 如果你想要改变世界，那么我们可以做个朋友。但如果你想要卖一辈子糖水，那么我们也可以做个朋友。因为写代码，只是为了交个朋友嘛。有任何问题，你可以通过以下方式找到我：
 
 - QQ邮箱：750746291@qq.com
-- [github](https://github.com/caicong0805)
+- [github](https://github.com/caicong0805/wxapp_tenVideo)源码，欢迎star
 - [个人主页](http://www.weaci.cn)
 ***
 
 ### 彩蛋：
-最后送给大家demo里出现的《三分钟回顾2017》，谢谢支持！
+最后送给大家demo里出现的《三分钟回顾2017》，谢谢支持，共勉。
 
-<video id="video" controls="" preload="none" poster="" width=500 height=300>
+<video id="video" controls="" preload="none" poster="https://github.com/caicong0805/wxapp_tenVideo/blob/master/images/poster.png?raw=true" width=500 height=300>
 <source id="mp4" src="http://gslb.miaopai.com/stream/PAEyMDoxMSB9hV6BVT1l5SHT-sMVVRVgHlL7bA__.mp4?mpflag=64&amp;vend=1&amp;os=3&amp;partner=1&amp;platform=2&amp;cookie_id=&amp;refer=miaopai&amp;scid=PAEyMDoxMSB9hV6BVT1l5SHT-sMVVRVgHlL7bA__ " type="video/mp4">
 </video>
+
+***
 
